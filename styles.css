@@ -296,46 +296,6 @@ main p {
   background-color: #bb9900;
 }
 
-/* #resume {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-    margin: auto;
-}
-
-#resume h2 {
-    font-size: 2.5rem;
-    color: #F9CE06;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-    text-transform: uppercase;
-}
-
-.my-resume {
-    padding: 2rem 5rem;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-
-
-.content {
-    position: relative; 
-    padding-left: 20px; 
-}
-
-.content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px; 
-    height: 100%; 
-    border-left: 2px dashed #333; 
-} */
-
 #contact {
   display: flex;
   flex-direction: column;
@@ -663,8 +623,8 @@ footer {
   }
 
   .my-portfolio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
