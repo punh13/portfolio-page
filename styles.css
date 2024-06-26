@@ -625,7 +625,7 @@ footer {
   .my-portfolio {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 
   .my-portfolio-website__info h3 {
@@ -633,7 +633,7 @@ footer {
   }
 
   .my-portfolio-website__info p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .contact-form {
