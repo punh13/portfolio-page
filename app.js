@@ -1,3 +1,10 @@
+const listElements = document.querySelectorAll('.my-portfolio-website');
+const infoElements = document.querySelectorAll('.my-portfolio-website__info');
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navLinkItems = document.querySelectorAll('.nav-links li a');
+
 document.addEventListener('mousemove', (event) => {
   let dot = document.getElementById('dot');
   dot.style.transform = `translate(${event.pageX}px, ${event.pageY}px)`;
@@ -12,17 +19,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const listElements = document.querySelectorAll('.my-portfolio-website');
-const infoElements = document.querySelectorAll('.my-portfolio-website__info');
-
-const infoElementHandler = index => {
+const infoElementHandler = (index) => {
   infoElements[index].style.display = 'block';
   const backdropElement = document.createElement('div');
   backdropElement.classList.add('backdrop');
   listElements[index].appendChild(backdropElement);
 };
 
-const removeBackdrop = index => {
+const removeBackdrop = (index) => {
   const backdropElement = listElements[index].querySelector('.backdrop');
   if (backdropElement) {
     backdropElement.remove();
@@ -40,9 +44,27 @@ listElements.forEach((item, index) => {
   });
 });
 
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('.nav-links');
-
-hamburger.addEventListener('click', () => {
+const toggleMenu = () => {
   navLinks.classList.toggle('active');
+};
+
+const closeMenu = () => {
+  navLinks.classList.remove('active');
+};
+
+hamburger.addEventListener('click', (event) => {
+  event.stopPropagation(); 
+  toggleMenu();
+});
+
+document.addEventListener('click', (event) => {
+  if (navLinks.classList.contains('active')) {
+    closeMenu();
+  }
+});
+
+navLinkItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    closeMenu();
+  });
 });
