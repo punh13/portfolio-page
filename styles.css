@@ -625,12 +625,12 @@ footer {
   .my-portfolio {
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: calc((100vw - 320px) / 2)
   }
 
   .my-portfolio-website__image img {
-    width: 340px;
-    height: 340px;
+    width: 320px;
+    height: 320px;
   }
 
   .my-portfolio-website__info h3 {
