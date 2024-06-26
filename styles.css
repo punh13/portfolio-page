@@ -628,24 +628,12 @@ footer {
     gap: 20px;
   }
 
-  .my-portfolio-website__image img {
-    width: 10rem;
-    height: 10rem;
-    display: block;
-  }
-
   .my-portfolio-website__info h3 {
     font-size: 16px;
   }
 
   .my-portfolio-website__info p {
     font-size: 10px;
-  }
-
-  .my-portfolio-website__info a {
-    border-radius: 3px;
-    padding: 4px;
-    font-size: 8px;
   }
 
   .contact-form {
