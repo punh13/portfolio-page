@@ -625,7 +625,7 @@ footer {
   .my-portfolio {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 70px;
   }
 
   .my-portfolio-website__image img {
