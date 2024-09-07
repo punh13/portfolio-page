@@ -79,10 +79,8 @@ header a {
 }
 
 main {
-  background: url('images/laptop.jpg'); /*left 10% bottom 20% / cover no-repeat
-    border-box; */
+  background: url('images/laptop.jpg');
   background-repeat: no-repeat;
-  /* background-position: left 10% bottom 20%; */
   background-position: right 5%;
   background-size: cover;
   height: 100vh;
@@ -160,7 +158,6 @@ main p {
 .about-me__content {
   display: flex;
   flex-direction: column;
-  width: 70%;
   gap: 1rem;
   margin: auto;
   padding-top: 2rem;
@@ -560,6 +557,10 @@ footer h2 {
     opacity: 1;
     width: auto;
     padding: 0;
+  }
+
+  .about-me__content {
+    width: 80%;
   }
 
   .my-skills {
