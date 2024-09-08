@@ -13,14 +13,14 @@ document.addEventListener('mousemove', (event) => {
 window.addEventListener('scroll', () => {
   let navbar = document.getElementById('navbar');
   if (window.scrollY > 0) {
-    navbar.style.backgroundColor = '#333';
+    navbar.classList.add('scroll');
   } else {
-    navbar.style.backgroundColor = 'transparent';
+    navbar.classList.remove('scroll');
   }
 });
 
 const infoElementHandler = (index) => {
-  infoElements[index].style.display = 'block';
+  infoElements[index].style.display = 'flex';
   const backdropElement = document.createElement('div');
   backdropElement.classList.add('backdrop');
   listElements[index].appendChild(backdropElement);

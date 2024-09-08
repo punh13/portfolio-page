@@ -29,6 +29,11 @@ body {
   z-index: 5;
 }
 
+#navbar.scroll {
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .hamburger {
   font-size: 1.5rem;
   color: white;
@@ -79,7 +84,7 @@ header a {
 }
 
 main {
-  background: url('images/laptop.jpg');
+  background: url('images/laptop.jpeg');
   background-repeat: no-repeat;
   background-position: right 5%;
   background-size: cover;
@@ -308,6 +313,8 @@ main p {
   justify-content: center;
   align-items: center;
   position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .backdrop {
@@ -316,19 +323,8 @@ main p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 1;
-}
-
-.my-portfolio-website__image {
-  width: 100%;
-}
-
-.my-portfolio-website__image img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
 }
 
 .my-portfolio-website__info {
@@ -337,43 +333,63 @@ main p {
   display: none;
   transition: opacity 1s ease;
   z-index: 2;
-  width: 90%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .my-portfolio-website__info h3 {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f9ce06;
 }
 
 .my-portfolio-website__info p {
-  font-size: 1.2rem;
-  margin: 1.5rem 0 3rem 0;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem 0;
   font-weight: 300;
+  color: #fff;
 }
 
 .my-portfolio-website__info--btns {
   display: flex;
-  justify-content: space-between;
+  margin-top: auto;
 }
 
 .my-portfolio-website__info--btns button {
   background-color: #f9ce06;
-  padding: 4px 4px;
+  padding: 5px 8px;
   border: none;
-  border-radius: 5px;
-}
-
-.my-portfolio-website__info a {
-  text-decoration: none;
-  color: #201f20;
+  border-radius: 50%;
+  margin-left: 0.5rem;
   font-size: 1.2rem;
-  max-width: max-content;
 }
 
 .my-portfolio-website__info--btns button:hover {
   background-color: #bb9900;
 }
 
+.my-portfolio-website__info--btns button i {
+  color: #000;
+}
+
+.my-portfolio-website__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.my-portfolio-website__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: inherit;
+}
 #contact {
   display: flex;
   flex-direction: column;
@@ -556,7 +572,7 @@ footer h2 {
     background-color: transparent;
     opacity: 1;
     width: auto;
-    padding: 0;
+    padding: 0.5rem;
   }
 
   .about-me__content {
