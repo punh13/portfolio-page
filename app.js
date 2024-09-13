@@ -6,8 +6,11 @@ const navLinks = document.querySelector('.nav-links');
 const navLinkItems = document.querySelectorAll('.nav-links li a');
 
 document.addEventListener('mousemove', (event) => {
-  let dot = document.getElementById('dot');
-  dot.style.transform = `translate(${event.pageX}px, ${event.pageY}px)`;
+  let dot = document.querySelector('.dot');
+  let mouseX = event.clientX;
+  let mouseY = event.clientY;
+  dot.style.left = `${mouseX}px`;
+  dot.style.top = `${mouseY}px`;
 });
 
 window.addEventListener('scroll', () => {
