@@ -454,6 +454,7 @@ textarea::placeholder {
 .contact-info__infos {
   display: grid;
   grid-template-columns: 12% 88%;
+  align-items: center;
   row-gap: 2rem;
   column-gap: 2rem;
   padding: 1rem 0;
